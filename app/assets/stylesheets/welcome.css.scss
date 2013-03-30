@@ -1,3 +1,841 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body { 
+  font-family: Arial,Helvetica,sans-serif; 
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: normal; 
+  font-size: 12px; 
+  list-style: none outside none; 
+  background-color: #999;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+#content_area {
+  background-color: #fff;
+}
+
+.title {
+  color:#224764;
+  font-size:12pt;
+  font-weight:bold;
+  margin-bottom:3px;
+  text-align:right;
+}
+
+.label-text { color: rgb(102, 102, 102); border: 0px none; font-size: 9pt; font-weight: bold; vertical-align: top; }
+
+img { border: medium none; }
+
+a {
+  border: 0px none;
+  color: #414141;
+  font-size: 9pt;
+  text-decoration: underline;
+}
+
+a:visited {  }
+
+a:hover {  }
+
+h4 {
+  margin-bottom:0px;
+  margin-top:0px;
+}
+
+#login-nav {
+  float:right;
+  font-size: 12px;
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none;
+  margin-right:10px;
+  margin-top:5px;
+}
+
+#login-nav li {
+  display:inline;
+  margin-right:5px;
+}
+
+.login-menu { color: rgb(255, 255, 255); }
+
+.login-menu a {
+  color: #ddd;
+  padding-right: 10px;
+}
+
+#search-form { padding-top: 2px; padding-bottom: 2px; margin-top: 0px; }
+/* ================ begin: table ================  */
+.summary-table { border: 1px solid; border-collapse: collapse; margin-bottom: 10px; margin-top: 10px; width: 965px; }
+.summary-table th { border-top: 1px solid; border-bottom: 1px solid; font-weight: bold; padding: 3px 8px; text-align: left; }
+.summary-table td { padding: 3px 8px; vertical-align: top; }
+
+.actions {
+  width: 100px;
+}
+/* ================ end: table ================  */
+
+/* ================ begin: outline-table ================  */
+.outline-table {
+  border:1px solid;
+  border-collapse:collapse;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+.outline-table th {
+  border-top:1px solid;
+  border-bottom:1px solid;
+  font-weight:bold;
+  padding:3px 8px;
+  text-align: left;
+}
+
+.outline-table td {
+  padding:3px 8px;
+  vertical-align: top;
+}
+/* ================ end: outline-table ================  */
+
+/* ================ begin: column-table-pmg ================  */
+.column-table-pmg {
+  border:1px none #FFFFFF;
+  color:#000000;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:9pt;
+}
+
+.column-table-cell {
+  border: 1px solid #8D8D8D;
+}
+
+/* ================ end: column-table-pmg ================  */
+
+/* ================ begin: column-table ================  */
+.column-table {
+  border:0px solid;
+  border-collapse:collapse;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+.column-table td {
+  padding-right: 20px;
+  vertical-align: top;
+}
+
+.column-table h3 {
+  margin-bottom:0px;
+  margin-top:0px;  
+}
+
+/* ================ end: column-table ================  */
+
+/* ================ begin: flash and error stuff ================  */
+#flash-errors, #errorExplanation, .errors {
+  margin: 0 auto;
+  background: #BF1717;
+  padding: 2px;
+  color: #FFFFFF;
+  text-align: center;
+}
+#flash-notice {
+  background: #CAEFA5;
+  padding: 10px;
+  color: #051;
+  text-align: center;
+}
+#flash-warn {
+  background-color: #FF5A00;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+.formError, .errorExplanation {
+  color:#FF0000;
+}
+
+#announcement {
+  background: white;
+  padding: 10px;
+  color: black;
+  text-align: center;
+   font-weight: bold;
+   font-size: 22px;
+   border-style:ridge;
+   border-width:medium;
+}
+
+/* ================ end: flash and error stuff ================  */
+
+/* ================ begin: exclusions ================  */
+.exclusions {
+  color: #ff0000; 
+} 
+/* ================ end: exclusions ================  */
+
+/* ================ begin: comments ================  */
+.comments {
+  /*font-style: italic;*/
+} 
+/* ================ end: comments ================  */
+
+/* ================ begin: alternate row shading ================  */
+tr.even td { background-color: rgb(255, 255, 255); }
+tr.odd td { background-color: rgb(238, 238, 238); }
+
+/* ================ end: alternate row shading ================  */
+
+/* ================ begin: main ================  */
+td.main { width: 975px; max-width: 975px; }
+/* ================ end: main ================  */
+
+/* ================ begin: search ================  */
+td.search {
+/*
+  width: 180px;
+  max-width: 180px;
+*/
+}
+/* ================ end: search ================  */
+
+/* ================ begin: sidebar ================  */
+#project-sidebar {
+  width: 180px;
+  max-width: 180px;
+}
+
+#sidebar {
+  width: 180px;
+  max-width: 180px;
+}
+/* ================ end: sidebar ================  */
+
+
+/* ================ begin: nav-header ================  */
+.nav-header {
+  margin:-5px -5px 10px; /*Â negate the padding in the table/cell that contains it */
+  border-bottom:1px solid #6F1B1B;
+}
+.nav-header #title {
+  font-weight: bold;
+  font-size: 32px;
+}
+/* ================ end: nav-header ================  */
+
+/* ================ begin: gallery ================  */
+ul.gallery {
+  list-style: none;
+}
+
+ul.gallery li {
+  float: left; 
+  width: 200px; 
+  /*height: 325px;*/
+  margin-top: 25px;
+  margin-right: 20px;
+} 
+
+.gallery-description {
+  font-size: 11px;
+  font-style: italic;
+}
+
+/* ================ end: gallery ================  */
+
+
+/* ================ begin: request-count ================  */
+.request-count {
+  color: #0000ff;  
+}
+/* ================ end: request-count ================  */
+
+/* ================ begin: prev-next ================  */
+.prev-next a {
+  font-weight: bold;
+  font-size: 16px;
+}
+/* ================ end: prev-next ================  */
+
+/* ================ begin: cheap ================  */
+.cheap {
+  color: #279F37;
+  font-weight: bold;
+}
+/* ================ end: cheap ================  */
+
+/* ================ begin: specialties ================  */
+.specialties li {
+  padding: 0px;  
+  margin-left:-40px;
+  list-style-type: none;
+}
+/* ================ end: specialties ================  */
+
+.details-table {
+  border:1px none #224780;
+  color:#000000;
+  font-size:9pt;
+  background-color: rgb(222,222,222);
+}
+
+.heads {
+  color:#000000;
+  font-size:10pt;
+  font-weight:bold;
+}
+
+.outline-table-pmg {
+  border:0px none;
+  color:#666666;
+  font-size:9pt;
+}
+/* ================ begin: summary-table-pmg ================  */
+.summary-table-pmg {
+  border: 1px solid #8D8D8D;
+  color:#666666;
+  border-collapse:collapse;
+  margin-bottom:10px;
+  margin-top:10px;
+  width:965px;
+}
+
+.summary-table-pmg th {
+  border-top: 1px solid #8D8D8D;
+  border-bottom: 1px solid #8D8D8D;
+  font-weight:bold;
+  padding:3px 8px;
+  text-align: left;
+}
+
+.summary-table-pmg td {
+  padding:3px 8px;
+  vertical-align: top;
+}
+
+/* ================ end: summary-table-pmg ================  */
+
+/* ================ begin: detail-table-pmg ================  */
+.detail-table-pmg {
+  border: 1px solid #8D8D8D;
+  color:#666666;
+  border-collapse:collapse;
+  margin-bottom:10px;
+  margin-top:10px;
+  width: 775px;
+}
+
+/* ================ end: detail-table-pmg ================  */
+
+.heads {
+  color:#000000;
+  font-size:10pt;
+  font-weight:bold;
+}
+
+.subheads {
+  color:#000000;
+  font-size:9pt;
+  font-weight:bold;
+}
+
+.pref-vendor {
+  color:#FF0000;
+  font-size:9pt;
+  font-weight:bold;
+}
+
+.perm-table td {
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+.option-summary td {
+  padding: 2px;
+}
+
+.highlight {
+  background-color: #FDDFFF;
+}
+
+.approved {
+  background-color: #DFFFE0;
+}
+
+/* ================ begin: authorization-costs ================  */
+.authorization-costs th {
+  border: none;
+  
+}
+/* ================ end: authorization-costs ================  */  
+
+div.right_set {
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}             
+
+div.right_set input.right_name {
+  float: none;
+  display: block;
+}
+              
+input.update {
+  clear:both;
+  display:block;  
+}
+
+p.new_nested {
+  clear:both;
+}
+body {
+  font-family: Arial,Helvetica,sans-serif;
+  font-style:normal;
+  font-variant:normal;
+  font-weight:normal;
+  font-size: 12px;
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none;  
+}
+
+.title {
+  color:#224764;
+  font-size:12pt;
+  font-weight:bold;
+  margin-bottom:3px;
+  text-align:right;
+}
+
+.label-text {
+  color: #666666;
+  border: 0px none;
+  font-size: 9pt;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+img {
+  border: none;
+}
+
+a {
+  border:0px none;
+  color:#224764;
+  font-size:9pt;
+  text-decoration:underline;  
+}
+
+a:visited {
+  /**color: blue;*/
+}
+
+a:hover {
+  /**text-decoration: underline;*/
+}
+
+
+h4 {
+  margin-bottom:0px;
+  margin-top:0px;
+}
+
+#login-nav {
+  float:right;
+  font-size: 12px;
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none;
+  margin-right:10px;
+  margin-top:5px;
+}
+
+#login-nav li {
+  display:inline;
+  margin-right:5px;
+}
+
+.login-menu {
+  color: #ffffff;
+}
+.login-menu a {
+  color: #E80F84;
+  padding-right:10px;
+}
+
+#search-form {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 0px;
+}
+
+/* ================ begin: table ================  */
+.summary-table {
+  border:1px solid;
+  border-collapse:collapse;
+  margin-bottom:10px;
+  margin-top:10px;
+  width:965px;
+}
+.summary-table th {
+  border-top:1px solid;
+  border-bottom:1px solid;
+  font-weight:bold;
+  padding:3px 8px;
+  text-align: left;
+}
+
+.summary-table td {
+  padding:3px 8px;
+  vertical-align: top;
+}
+
+.actions {
+  width: 100px;
+}
+/* ================ end: table ================  */
+
+/* ================ begin: outline-table ================  */
+.outline-table {
+  border:1px solid;
+  border-collapse:collapse;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+.outline-table th {
+  border-top:1px solid;
+  border-bottom:1px solid;
+  font-weight:bold;
+  padding:3px 8px;
+  text-align: left;
+}
+
+.outline-table td {
+  padding:3px 8px;
+  vertical-align: top;
+}
+/* ================ end: outline-table ================  */
+
+/* ================ begin: column-table-pmg ================  */
+.column-table-pmg {
+  border:1px none #FFFFFF;
+  color:#000000;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:9pt;
+}
+
+.column-table-cell {
+  border: 1px solid #8D8D8D;
+}
+
+/* ================ end: column-table-pmg ================  */
+
+/* ================ begin: column-table ================  */
+.column-table {
+  border:0px solid;
+  border-collapse:collapse;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+.column-table td {
+  padding-right: 20px;
+  vertical-align: top;
+}
+
+.column-table h3 {
+  margin-bottom:0px;
+  margin-top:0px;  
+}
+
+/* ================ end: column-table ================  */
+
+/* ================ begin: flash and error stuff ================  */
+#flash-errors, #errorExplanation, .errors {
+  margin: 0 auto;
+  background: #BF1717;
+  padding: 2px;
+  color: #FFFFFF;
+  text-align: center;
+}
+#flash-notice {
+  background: #CAEFA5;
+  padding: 10px;
+  color: #051;
+  text-align: center;
+}
+#flash-warn {
+  background-color: #FF5A00;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+#flash-validate {
+padding: 2px;
+color: red;
+text-align: center;
+}
+.formError, .errorExplanation {
+  color:#FF0000;
+}
+/* ================ end: flash and error stuff ================  */
+
+/* ================ begin: exclusions ================  */
+.exclusions {
+  color: #ff0000; 
+} 
+/* ================ end: exclusions ================  */
+
+/* ================ begin: comments ================  */
+.comments {
+  /*font-style: italic;*/
+} 
+/* ================ end: comments ================  */
+
+/* ================ begin: alternate row shading ================  */
+tr.even td{
+  background-color:#FFFFFF;
+}
+
+tr.odd td{
+  background-color:#EEE;
+}
+/* ================ end: alternate row shading ================  */
+
+/* ================ begin: main ================  */
+td.main {
+  width: 975px;
+  max-width: 975px;
+}
+/* ================ end: main ================  */
+
+/* ================ begin: search ================  */
+td.search {
+/*
+  width: 180px;
+  max-width: 180px;
+*/
+}
+/* ================ end: search ================  */
+
+/* ================ begin: sidebar ================  */
+#project-sidebar {
+  width: 180px;
+  max-width: 180px;
+}
+
+#sidebar {
+  width: 180px;
+  max-width: 180px;
+}
+/* ================ end: sidebar ================  */
+
+
+/* ================ begin: nav-header ================  */
+.nav-header {
+  margin:-5px -5px 10px; /*Â negate the padding in the table/cell that contains it */
+  border-bottom:1px solid #6F1B1B;
+}
+.nav-header #title {
+  font-weight: bold;
+  font-size: 32px;
+}
+/* ================ end: nav-header ================  */
+
+/* ================ begin: gallery ================  */
+ul.gallery {
+  list-style: none;
+}
+
+ul.gallery li {
+  float: left; 
+  width: 200px; 
+  /*height: 325px;*/
+  margin-top: 25px;
+  margin-right: 20px;
+} 
+
+.gallery-description {
+  font-size: 11px;
+  font-style: italic;
+}
+
+/* ================ end: gallery ================  */
+
+
+/* ================ begin: request-count ================  */
+.request-count {
+  color: #0000ff;  
+}
+/* ================ end: request-count ================  */
+
+/* ================ begin: prev-next ================  */
+.prev-next a {
+  font-weight: bold;
+  font-size: 16px;
+}
+/* ================ end: prev-next ================  */
+
+/* ================ begin: cheap ================  */
+.cheap {
+  color: #279F37;
+  font-weight: bold;
+}
+/* ================ end: cheap ================  */
+
+/* ================ begin: specialties ================  */
+.specialties li {
+  padding: 0px;  
+  margin-left:-40px;
+  list-style-type: none;
+}
+/* ================ end: specialties ================  */
+
+.heads {
+  color:#000000;
+  font-size:10pt;
+  font-weight:bold;
+}
+
+.outline-table-pmg {
+  border:0px none;
+  color:#666666;
+  font-size:9pt;
+}
+/* ================ begin: summary-table-pmg ================  */
+.summary-table-pmg {
+  border: 1px solid #8D8D8D;
+  color:#666666;
+  border-collapse:collapse;
+  margin-bottom:10px;
+  margin-top:10px;
+  width:965px;
+}
+
+.summary-table-pmg th {
+  border-top: 1px solid #8D8D8D;
+  border-bottom: 1px solid #8D8D8D;
+  font-weight:bold;
+  padding:3px 8px;
+  text-align: left;
+}
+
+.summary-table-pmg td {
+  padding:3px 8px;
+  vertical-align: top;
+}
+
+/* ================ end: summary-table-pmg ================  */
+
+/* ================ begin: detail-table-pmg ================  */
+.detail-table-pmg {
+  border: 1px solid #8D8D8D;
+  color:#666666;
+  border-collapse:collapse;
+  margin-bottom:10px;
+  margin-top:10px;
+  width: 775px;
+}
+
+/* ================ end: detail-table-pmg ================  */
+
+.heads {
+  color:#000000;
+  font-size:10pt;
+  font-weight:bold;
+}
+
+.subheads {
+  color:#000000;
+  font-size:9pt;
+  font-weight:bold;
+}
+
+.pref-vendor {
+  color:#FF0000;
+  font-size:9pt;
+  font-weight:bold;
+}
+
+.perm-table td {
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+.option-summary td {
+  padding: 2px;
+}
+
+.highlight {
+  background-color: #FDDFFF;
+}
+
+.approved {
+  background-color: #DFFFE0;
+}
+
+/* ================ begin: authorization-costs ================  */
+.authorization-costs th {
+  border: none;
+  
+}
+/* ================ end: authorization-costs ================  */  
+
+div.right_set {
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}             
+
+div.right_set input.right_name {
+  float: none;
+  display: block;
+}
+              
+input.update {
+  clear:both;
+  display:block;  
+}
+
+p.new_nested {
+  clear:both;
+}
+
+.whitecopyright {
+  color: #FFF;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10pt;
+  margin-top: 1px;
+  margin-right: 15px;
+  margin-bottom: 1px;
+  margin-left: 1px;
+  padding-top: 1px;
+  padding-right: 15px;
+  padding-bottom: 1px;
+  padding-left: 1px;
+  text-align: right;
+}
+
+a.cost_add_link {
+    font-weight: bold;
+    font-size: 12pt;
+    color: green;
+    padding: 4px;
+}
+
+a.cost_remove_link {
+    font-weight: bold;
+    font-size: 12pt;
+    color: red;
+    padding: 4px;
+}
+
+.grant_override {
+    font-weight: bold;
+    text-align: right;
+}

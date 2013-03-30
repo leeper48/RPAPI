@@ -1,2 +1,54 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<table cellspacing="0" cellpadding="0" align="center" id="content_area" width="975px">
+	<tbody>
+		<tr>
+			<td>
+			<header class="navbar navbar-fixed-top navbar-inverse">
+				<div>
+					<img src="../assets/RP_banner.png">
+					<table width="100%">
+						<tr align="right">
+							<td></td>
+							<td align="right"> <%= form_tag("", :method => "post") do %>
+							<%= label_tag(:q, "SEARCH") %>
+							<br />
+							<%= text_field_tag(:q, "") %>
+							<%= submit_tag("Search") %>
+							<% end %>
+							<% @phrase = params[:q] %> </td>
+						</tr>
+						<tr>
+							<td><a href="https://www.right-photo.com/assets?project%5Btitle%5D=&license%5Bholder%5D=&license%5Bterms%5D=&search=<%= @phrase %>"><h2>RP Results</h2></a></td>
+							<td ><h2><span style="background-color: #0b1;">Showing: Getty Results</span></h2></td>
+						</tr>
+					</table>
+				</div>
+			</header><div class="container"></div>
+			<table class="summary-table" width="975px">
+				<tbody>
+					<tr>
+						<th valign="top">Photo</th>
+						<th valign="top">Identifier</th>
+						<th valign="top">Copyright Code</th>
+						<th valign="top">License Type</th>
+						<th valign="top">Rights Holder</th>
+						<th valign="top">Description</th>
+					</tr>
+					<% if @phrase == nil %>
+					<% @phrase = "dog" %>
+					<% end %>
+					<% imgsearch(@phrase)%>
+					<% @found.to_enum.with_index(0).each do |elem,i| %>
+					<tr>
+						<td><a href= <%= @found[i]["UrlPreview"]%> ><img src="<%= @found[i]["UrlThumb"] %>" height="42px" width="auto"/></a></td>
+						<td><%= @found[i]["CollectionId"] %></td>
+						<td></td>
+						<td> <%= @found[i]["LicensingModel"] %> </td>
+						<td> <%= @found[i]["Artist"] %> </td>
+						<td> <%= @found[i]["Caption"] %></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table></td>
+		</tr>
+	</tbody>
+</table>
