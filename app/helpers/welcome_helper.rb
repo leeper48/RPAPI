@@ -9,6 +9,5 @@ module WelcomeHelper
     require './app/models/search_for_images_sample.rb'
     @imgsch = SearchForImagesSample.new
     @found = @imgsch.search_for_images(sessiontoken, schphrase)
-
   end
 end
